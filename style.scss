@@ -1,0 +1,153 @@
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+  width: 100%;
+  font-family: "Karla", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $light-gray;
+}
+
+.container {
+  width: 300px;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  border-radius: 20px;
+  margin: 100px 0;
+}
+.join-our-community-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px 10px 0 0;
+  h2 {
+    margin-top: 0;
+    color: $cyan;
+    font-size: 22px;
+  }
+  .guarantee {
+    color: $bright-yellow;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .details {
+    color: $grayish-blue;
+    font-size: 12px;
+    line-height: 25px;
+    margin-bottom: 0;
+  }
+}
+.price-section {
+  background-color: $cyan;
+  padding: 30px;
+  color: white;
+  border-radius: 0;
+  h3 {
+    margin-top: 0;
+  }
+  .price-per-mounth {
+    margin-bottom: 0;
+    position: relative;
+    .price {
+      font-size: 25px;
+      font-weight: 700;
+      padding-right: 10px;
+    }
+    .text {
+      font-size: 13px;
+      color: $light-gray;
+      position: absolute;
+      top: 7px;
+    }
+  }
+  .details {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: $light-gray;
+    font-size: 14px;
+  }
+  button {
+    width: 100%;
+    height: 50px;
+    background-color: $bright-yellow;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    &:hover {
+      background-color: hsl(71, 66%, 64%);
+    }
+  }
+}
+.whyUs-section {
+  background-color: hsl(179, 47%, 61%);
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+  h3 {
+    margin-top: 0;
+    color: white;
+  }
+  p {
+    font-size: 13px;
+    color: $light-gray;
+    margin-bottom: 0;
+    line-height: 19px;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: $grayish-blue;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media screen and(min-width: 700px) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    width: 600px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .join-our-community-section {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    h2 {
+      font-size: 30px;
+    }
+    .guarantee {
+      font-size: 18px;
+    }
+    .details {
+      font-size: 15px;
+    }
+  }
+  .price-section {
+    border-radius: 0 0 0px 10px;
+  }
+  .whyUs-section {
+    border-radius: 0 0 10px 0px;
+  }
+}
