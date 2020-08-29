@@ -176,10 +176,13 @@ body {
     font-size: 18px;
   }
   .join-our-community-section .details {
-    font-size: 16px;
+    font-size: 15px;
   }
   .price-section {
     border-radius: 0 0 0px 10px;
+  }
+  .price-section .details{
+    font-size: 16px;
   }
   .whyUs-section {
     border-radius: 0 0 10px 0px;
